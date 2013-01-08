@@ -16,6 +16,24 @@ body {
     background-color: #262621;
 }
 
+::-moz-selection {
+    background: #6BE5F2;
+    text-shadow: none;
+    color: #666;
+}
+
+::-webkit-selection {
+    background: #6BE5F2;
+    text-shadow: none;
+    color: #666;
+}
+
+::selection {
+    background: #6BE5F2;
+    text-shadow: none;
+    color: #666;
+}
+
 #themes {
     height: 5px;
     background-color: #6BE5F2;
@@ -85,9 +103,11 @@ body {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
+
 .icon-google-plus:before {
     content: "\e000";
 }
+
 .icon-twitter:before {
     content: "\e001";
 }
@@ -126,23 +146,13 @@ body {
     height: 5px;
 }
 
-.theme01 {
-    background-color: #F22987;
-}
+.theme01 {background-color: #F22987;}
 
-.theme02 {
-    background-color: #A37EF2;
-}
+.theme02 {background-color: #A37EF2;}
 
-.theme03 {
-    background-color: #6BE5F2;
-}
+.theme03 {background-color: #6BE5F2;}
 
-.theme04 {
-    background-color: #A2D92B;
-}
-
-/* Temas */
+.theme04 {background-color: #A2D92B;}
 
 .wrap {
     margin: 0 auto;
@@ -229,38 +239,21 @@ body {
 
 }
 
-/* skill levels */
+/* skill level */
 
-.beginner {
-    font-size: 1.8em
-}
+.beginner {font-size: 1.8em}
 
-.basic {
-    font-size: 2.4em;
-}
+.basic {font-size: 2.6em;}
 
-.intermediate {
-    font-size: 3em
-}
+.intermediate {font-size: 3.3em}
 
-.advanced {
-    font-size: 3.6em;
-}
+.advanced {font-size: 4em;}
 
 /* CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack */
 
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-
-.cf:after {
-    clear: both
-}
-
-.cf {
-    *zoom: 1;
-}
+.cf:before, .cf:after {content: " ";display: table;}
+.cf:after {clear: both}
+.cf {*zoom: 1;}
 
 /* ---------------------------------------------------------
  Print styles
