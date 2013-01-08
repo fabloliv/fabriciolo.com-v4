@@ -1,0 +1,312 @@
+/* ---------------------------------------------------------
+ HTML5 Bones
+ This stylesheet contains print styling and a section for
+ you to simply add your own. This is a basic template
+ after all.
+ ---------------------------------------------------------*/
+
+/* background to test:
+ * dark blue 030A1C
+ * ubuntu dark 2C001E
+ * dark gray 262621
+*/
+
+body {
+    font-size: 62.5%;
+    background-color: #262621;
+}
+
+#themes {
+    height: 5px;
+    background-color: #6BE5F2;
+}
+
+#social {}
+
+#social-links {
+    font-size: 4em;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+#social-links li {
+    display: inline-block;
+    height: 1.8em;
+    width: 1.8em;
+}
+
+#social-links a {
+    color: #999;
+    height: 100%;
+    line-height: 1.9em;
+    text-decoration: none;
+    width: 100%;
+}
+
+#social-links a:hover {
+    color: #FFF;
+}
+
+.icon-alone {
+    display: inline-block;
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.svg#icomoon') format('svg'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-google-plus:before {
+    content: "\e000";
+}
+.icon-twitter:before {
+    content: "\e001";
+}
+.icon-github:before {
+    content: "\e002";
+}
+.icon-html5:before {
+    content: "\e003";
+}
+.icon-css3:before {
+    content: "\e004";
+}
+.icon-skype:before {
+    content: "\e005";
+}
+.icon-linkedin:before {
+    content: "\e006";
+}
+
+/* THEMES */
+
+.styleswitcher {
+    height: 5px;
+    width: 50%;
+    float: right;
+}
+
+.styleswitcher li {
+    width: 25%;
+    height: 5px;
+    float: left;
+}
+
+.theme-btn {
+    display: block;
+    height: 5px;
+}
+
+.theme01 {
+    background-color: #F22987;
+}
+
+.theme02 {
+    background-color: #A37EF2;
+}
+
+.theme03 {
+    background-color: #6BE5F2;
+}
+
+.theme04 {
+    background-color: #A2D92B;
+}
+
+/* Temas */
+
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.tag-list {
+    font-weight: 400;
+    font-size: 1em;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 15px 0 0 0;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.tag-list li {
+    display: inline-block;
+    color: #666;
+    margin: 0 2px;
+}
+
+.tag-list li:nth-child(even) {
+    /*color: #F22987; red*/
+    color: #6BE5F2;
+    /*color: #A2D92B; green*/
+}
+
+.tagline {
+    font-size: 4em;
+    margin-top: 10%;
+}
+
+.tagline .name {
+    color: #FFF;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    #themes {
+        height: 5em;
+    }
+    #social-links {
+        font-size: 3.7em;
+        padding: 15% 0;
+    }
+
+    .styleswitcher {
+        height: 100%;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .styleswitcher li {
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+
+    .theme-btn {
+        height: 100%;
+    }
+
+    .wrap {
+        width: 96%;
+    }
+
+    .tag-list {
+        font-size: .9em;
+    }
+
+    .tag-list li {
+        margin: 3px;
+        vertical-align: middle;
+    }
+
+    .tagline {
+        font-size: 4em;
+    }
+
+    .tagline .name {
+        display: block;
+    }
+
+}
+
+/* skill levels */
+
+.beginner {
+    font-size: 1.8em
+}
+
+.basic {
+    font-size: 2.4em;
+}
+
+.intermediate {
+    font-size: 3em
+}
+
+.advanced {
+    font-size: 3.6em;
+}
+
+/* CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack */
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* ---------------------------------------------------------
+ Print styles
+ ---------------------------------------------------------*/
+@media print {
+    * {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+    }
+    html {
+        background-color: #fff;
+    }
+    /* Hide navigation */
+    nav {
+        display: none;
+    }
+
+    /* Show link destinations in brackets after the link text */
+    a[href]:after {
+        content: " (" attr(href) ") ";
+    }
+    a[href] {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #06c;
+        border: none;
+    }
+    /* Don't show link destinations for javascript or internal links */
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    figure {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+
+    figure img {
+        border: 1px solid #000;
+    }
+
+}
