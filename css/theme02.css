@@ -1,0 +1,39 @@
+/*
+ * Tema 02
+ * 
+ * Modifica cores e detalhes da página
+ * 
+ * Cor principal: #A37EF2 
+ * 
+ */
+
+/* Cor de fundo do site */
+body {
+    background-color: #100c18; 
+}
+
+/* Seleção de texto */
+
+::-moz-selection { background: #A37EF2;text-shadow: none;color: #666; }
+
+::-webkit-selection { background: #A37EF2;text-shadow: none;color: #666; }
+
+::selection { background: #A37EF2;text-shadow: none;color: #666; }
+
+/* Container dos temas */
+
+#themes { background-color: #9271d9; }
+
+/* icones das redes sociais */
+
+#social-links a { color: #999; }
+
+#social-links a:hover { color: #FFF; }
+
+/* tags */
+
+.tag-list li { color: #666; }
+
+.tag-list li:nth-child(even) { color: #A37EF2; }
+
+.tagline .name { color: #FFF; }

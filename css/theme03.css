@@ -1,0 +1,39 @@
+/*
+ * Tema 03
+ * 
+ * Modifica cores e detalhes da página
+ * 
+ * Cor principal: #6BE5F2 
+ * 
+ */
+
+/* Cor de fundo do site */
+body {
+    background-color: #262621;
+}
+
+/* Seleção de texto */
+
+::-moz-selection { background: #6BE5F2;text-shadow: none;color: #666; }
+
+::-webkit-selection { background: #6BE5F2;text-shadow: none;color: #666; }
+
+::selection { background: #6BE5F2;text-shadow: none;color: #666; }
+
+/* Container dos temas */
+
+#themes { background-color: #6BE5F2; }
+
+/* icones das redes sociais */
+
+#social-links a { color: #999; }
+
+#social-links a:hover { color: #FFF; }
+
+/* tags */
+
+.tag-list li { color: #666; }
+
+.tag-list li:nth-child(even) { color: #6BE5F2; }
+
+.tagline .name { color: #FFF; }

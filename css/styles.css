@@ -1,8 +1,5 @@
 /* ---------------------------------------------------------
- HTML5 Bones
- This stylesheet contains print styling and a section for
- you to simply add your own. This is a basic template
- after all.
+ Estilos básicos 
  ---------------------------------------------------------*/
 
 /* background to test:
@@ -11,35 +8,7 @@
  * dark gray 262621
 */
 
-body {
-    font-size: 62.5%;
-    background-color: #262621;
-}
-
-::-moz-selection {
-    background: #6BE5F2;
-    text-shadow: none;
-    color: #666;
-}
-
-::-webkit-selection {
-    background: #6BE5F2;
-    text-shadow: none;
-    color: #666;
-}
-
-::selection {
-    background: #6BE5F2;
-    text-shadow: none;
-    color: #666;
-}
-
-#themes {
-    height: 5px;
-    background-color: #6BE5F2;
-}
-
-#social {}
+body {font-size: 62.5%;}
 
 #social-links {
     font-size: 4em;
@@ -54,20 +23,15 @@ body {
 }
 
 #social-links a {
-    color: #999;
     height: 100%;
     line-height: 1.9em;
     text-decoration: none;
     width: 100%;
 }
 
-#social-links a:hover {
-    color: #FFF;
-}
+/* icomoon */
 
-.icon-alone {
-    display: inline-block;
-}
+.icon-alone {display: inline-block;}
 
 .screen-reader-text {
     position: absolute;
@@ -129,24 +93,21 @@ body {
 
 /* THEMES */
 
-.styleswitcher {
-    height: 5px;
-    width: 50%;
-    float: right;
-}
+.styleswitcher { width: 50%;float: right; }
 
-.styleswitcher li {
-    width: 25%;
-    height: 5px;
-    float: left;
-}
+.styleswitcher li { width: 25%;float: left;height: 8px; }
 
 .theme-btn {
     display: block;
-    height: 5px;
+    height: 8px;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    transition: height 0.3s ease;
 }
 
-.theme01 {background-color: #F22987;}
+.theme-btn:hover { height: 16px; }
+
+.theme01 {background-color: #F92672;}
 
 .theme02 {background-color: #A37EF2;}
 
@@ -171,14 +132,7 @@ body {
 
 .tag-list li {
     display: inline-block;
-    color: #666;
     margin: 0 2px;
-}
-
-.tag-list li:nth-child(even) {
-    /*color: #F22987; red*/
-    color: #6BE5F2;
-    /*color: #A2D92B; green*/
 }
 
 .tagline {
@@ -186,56 +140,33 @@ body {
     margin-top: 10%;
 }
 
-.tagline .name {
-    color: #FFF;
-}
+/* ---------------------------------------------------------
+ MEDIA QUERIES
+ ---------------------------------------------------------*/
+
+/* 320x480 */
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
-    #themes {
-        height: 5em;
-    }
-    #social-links {
-        font-size: 3.7em;
-        padding: 15% 0;
-    }
+    #themes { height: 5em; }
 
-    .styleswitcher {
-        height: 100%;
-        width: 100%;
-        float: none;
-        margin: 0 auto;
-    }
-    .styleswitcher li {
-        width: 25%;
-        height: 100%;
-        float: left;
-    }
+    #social-links { font-size: 3.7em; padding: 15% 0; }
 
-    .theme-btn {
-        height: 100%;
-    }
+    .styleswitcher { height: 100%; width: 100%; float: none; margin: 0 auto; }
 
-    .wrap {
-        width: 96%;
-    }
+    .styleswitcher li { width: 25%; height: 100%; float: left; }
 
-    .tag-list {
-        font-size: .9em;
-    }
+    .theme-btn { height: 100%; }
 
-    .tag-list li {
-        margin: 3px;
-        vertical-align: middle;
-    }
+    .wrap { width: 96%; }
 
-    .tagline {
-        font-size: 4em;
-    }
+    .tag-list { font-size: .9em; }
 
-    .tagline .name {
-        display: block;
-    }
+    .tag-list li { margin: 3px; vertical-align: middle; }
+
+    .tagline { font-size: 4em; }
+
+    .tagline .name { display: block; }
 
 }
 
