@@ -26,13 +26,11 @@ body {
 
 /* icones das redes sociais */
 
-#social-links a { color: #999; }
+#social-links a, .tag-list li { color: #8b8b8b; }
 
 #social-links a:hover { color: #FFF; }
 
 /* tags */
-
-.tag-list li { color: #666; }
 
 .tag-list li:nth-child(even) { color: #A2D92B; }
 
