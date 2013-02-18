@@ -2,30 +2,63 @@
  Estilos básicos 
  ---------------------------------------------------------*/
 
-/* background to test:
- * dark blue 030A1C
- * ubuntu dark 2C001E
- * dark gray 262621
-*/
-
 body {
-    font-size: 62.5%;
-     -webkit-transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
     -moz-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
     transition: background-color .3s ease;
+    font-size: 62.5%;
 }
+
+/* STYLESWITCHER */
 
 #themes {
     background-color: #e02266;
     -webkit-transition: background-color .3s ease;
     -moz-transition: background-color .3s ease;
     transition: background-color .3s ease;
+    height: .8em;
 }
+
+.styleswitcher {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.styleswitcher,
+.styleswitcher li,
+.theme-btn {
+    height: 100%;
+}
+
+.styleswitcher li {
+    width: 25%;
+    float: left;
+}
+
+.theme-btn {
+    display: block;
+    border-left: .2em solid #333;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+}
+
+.theme01 {background-color: #F92672;}
+
+.theme02 {background-color: #A37EF2;}
+
+.theme03 {background-color: #6BE5F2;}
+
+.theme04 {background-color: #A2D92B;}
+
+/* SOCIAL / ICOMOON */
 
 #social-links {
     font-size: 4em;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1em 0;
 }
 
 #social-links li {
@@ -40,8 +73,6 @@ body {
     text-decoration: none;
     width: 100%;
 }
-
-/* icomoon */
 
 .icon-alone {display: inline-block;}
 
@@ -103,100 +134,107 @@ body {
     content: "\e006";
 }
 
-/* THEMES */
-
-.styleswitcher { width: 50%;float: right; }
-
-.styleswitcher li { width: 25%;float: left;height: 8px; }
-
-.theme-btn {
-    display: block;
-    height: 8px;
-    -webkit-transition: height 0.3s ease;
-    -moz-transition: height 0.3s ease;
-    transition: height 0.3s ease;
-}
-
-.theme-btn:hover { height: 16px; }
-
-.theme01 {background-color: #F92672;}
-
-.theme02 {background-color: #A37EF2;}
-
-.theme03 {background-color: #6BE5F2;}
-
-.theme04 {background-color: #A2D92B;}
+/* CONTENT */
 
 .wrap {
     margin: 0 auto;
-    width: 960px;
+    width: 96%;
+    max-width: 960px;
 }
 
 .tag-list {
+    font-family: 'Oswald',Arial,Helvetica,sans-serif;
+    font-size: 4em; /* ~40px */
     font-weight: 400;
-    font-size: 1em;
-    font-family: 'Oswald', Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    margin: 15px 0 0 0;
+    letter-spacing: -0.025em; /* ~ -1px */
+    line-height: 1em;
+    margin: 0.5em 0 0; /* ~20px */
     text-align: center;
-    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .tag-list li {
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 .05em;
 }
 
 .tagline {
-    font-size: 4em;
-    margin-top: 10%;
+    margin: 10% 0 0;
 }
+
+/* CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack */
+.cf:before, .cf:after {content: " ";display: table;}
+.cf:after {clear: both}
+.cf {*zoom: 1;}
 
 /* ---------------------------------------------------------
  MEDIA QUERIES
  ---------------------------------------------------------*/
 
-/* 320x480 */
+@media (max-width: 480px) {
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #themes {
+        height: 1.5em;
+    }
 
-    #themes { height: 5em; }
+    .styleswitcher {
+        width: 100%;
+    }
 
-    #social-links { font-size: 3.7em; padding: 15% 0; }
-
-    .styleswitcher { height: 100%; width: 100%; float: none; margin: 0 auto; }
-
-    .styleswitcher li { width: 25%; height: 100%; float: left; }
-
-    .theme-btn { height: 100%; }
-
-    .wrap { width: 96%; }
-
-    .tag-list { font-size: .9em; }
-
-    .tag-list li { margin: 3px; vertical-align: middle; }
-
-    .tagline { font-size: 4em; }
-
-    .tagline .name { display: block; }
+    .tagline .name {
+        display: block;
+    }
 
 }
 
-/* skill level */
+@media (min-width: 1020px) {
 
-.beginner {font-size: 1.8em}
+    body {
+        font-size: 75%;
+    }
 
-.basic {font-size: 2.6em;}
+    .theme-btn:hover {
+        height: 1.6em;
+    }
 
-.intermediate {font-size: 3.3em}
+    .styleswitcher {
+        width: 50%;
+        float: right;
+    }
 
-.advanced {font-size: 4em;}
+    .tag-list {
+        margin: .2em 0 0;
+    }
 
-/* CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack */
+    .tagline {
+        margin: 9% 0 0;
+    }
 
-.cf:before, .cf:after {content: " ";display: table;}
-.cf:after {clear: both}
-.cf {*zoom: 1;}
+    /* skill levels */
+
+    .beginner {
+        font-size: .4em; /* 40px / 16px */
+    }
+    .basic {
+        font-size: .65em; /* 40px / 26px */
+    }
+    .intermediate {
+        font-size: .9em; /* 40px / 36px */
+    }
+    /*.advanced {}*/
+}
+
+@media screen and (min-width: 1367px) {
+
+    body {
+        font-size: 100%;
+    }
+
+    .wrap {
+        max-width: 96em;
+    }    
+
+}
 
 /* ---------------------------------------------------------
  Print styles

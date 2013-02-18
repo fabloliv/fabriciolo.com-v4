@@ -1,4 +1,10 @@
-Versão atual (2013) do meu site.
-Criado com HTML5 usando o framework HTML5Bones, webfont, iconfont, possibilidade de trocar de cores através de temas.
-Será aplicado suporte pra várias resoluções, no momento apenas 320x480.
-Será a base para um blog Wordpress em breve.
+<h1>Versão 2013 (v4)</h1>
+
+<ul>
+<li>HTML5Bones como base</li>
+<li>Microdata</li>
+<li>Webfont - "Oswald" via Google Font</li>
+<li>iconfont - IcoMoon - http://keyamoon.com/icomoon/></li>
+<li>styleswitcher</li>
+<li>layout variável (responsive)</li>
+</ul>
