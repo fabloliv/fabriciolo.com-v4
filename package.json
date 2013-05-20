@@ -1,0 +1,20 @@
+{
+  "name": "fabriciolo.com-v4",
+  "author": "Fabricio Oliveira (@fabloliv)",
+  "version": "4.1.0",
+  "description": "My website. v4 2013",
+  "homepage": "http://fabriciolo.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fabloliv/fabriciolo.com-v4.git"
+  },
+  "engines": {
+    "node": "0.10.7",
+    "npm": "1.2.21"
+  },
+  "dependencies": {
+    "grunt-cli": "0.1.7",
+    "grunt": "~0.4.0",
+    "grunt-rsync": "0.1.1"
+  }
+}

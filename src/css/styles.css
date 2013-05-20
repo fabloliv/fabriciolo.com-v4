@@ -1,0 +1,286 @@
+/* ---------------------------------------------------------
+ Estilos básicos 
+ ---------------------------------------------------------*/
+
+body {
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    font-size: 62.5%;
+}
+
+/* STYLESWITCHER */
+
+#themes {
+    background-color: #e02266;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    height: .8em;
+}
+
+.styleswitcher {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.styleswitcher,
+.styleswitcher li,
+.theme-btn {
+    height: 100%;
+}
+
+.styleswitcher li {
+    width: 25%;
+    float: left;
+}
+
+.theme-btn {
+    display: block;
+    border-left: .2em solid #333;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+}
+
+.theme01 {background-color: #F92672;}
+
+.theme02 {background-color: #A37EF2;}
+
+.theme03 {background-color: #6BE5F2;}
+
+.theme04 {background-color: #A2D92B;}
+
+/* SOCIAL / ICOMOON */
+
+#social-links {
+    font-size: 4em;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#social-links li {
+    display: inline-block;
+    height: 1.8em;
+    width: 1.8em;
+}
+
+#social-links a {
+    height: 100%;
+    line-height: 1.9em;
+    text-decoration: none;
+    width: 100%;
+}
+
+.icon-alone {display: inline-block;}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.svg#icomoon') format('svg'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-google-plus:before {
+    content: "\e000";
+}
+
+.icon-twitter:before {
+    content: "\e001";
+}
+.icon-github:before {
+    content: "\e002";
+}
+.icon-html5:before {
+    content: "\e003";
+}
+.icon-css3:before {
+    content: "\e004";
+}
+.icon-skype:before {
+    content: "\e005";
+}
+.icon-linkedin:before {
+    content: "\e006";
+}
+
+/* CONTENT */
+
+.wrap {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 960px;
+}
+
+.tag-list {
+    font-family: 'Oswald',Arial,Helvetica,sans-serif;
+    font-size: 4em; /* ~40px */
+    font-weight: 400;
+    letter-spacing: -0.025em; /* ~ -1px */
+    line-height: 1em;
+    margin: 0.5em 0 0; /* ~20px */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tag-list li {
+    display: inline-block;
+    margin: 0 .05em;
+}
+
+.tagline {
+    margin: 10% 0 0;
+}
+
+/* CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack */
+.cf:before, .cf:after {content: " ";display: table;}
+.cf:after {clear: both}
+.cf {*zoom: 1;}
+
+/* ---------------------------------------------------------
+ MEDIA QUERIES
+ ---------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+    #themes {
+        height: 1.5em;
+    }
+
+    .styleswitcher {
+        width: 100%;
+    }
+
+    .tagline .name {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1020px) {
+
+    body {
+        font-size: 75%;
+    }
+
+    .theme-btn:hover {
+        height: 1.6em;
+    }
+
+    .styleswitcher {
+        width: 50%;
+        float: right;
+    }
+
+    .tag-list {
+        margin: .2em 0 0;
+    }
+
+    .tagline {
+        margin: 9% 0 0;
+    }
+
+    /* skill levels */
+
+    .beginner {
+        font-size: .4em; /* 40px / 16px */
+    }
+    .basic {
+        font-size: .65em; /* 40px / 26px */
+    }
+    .intermediate {
+        font-size: .9em; /* 40px / 36px */
+    }
+    /*.advanced {}*/
+}
+
+@media screen and (min-width: 1367px) {
+
+    body {
+        font-size: 100%;
+    }
+
+    .wrap {
+        max-width: 96em;
+    }    
+
+}
+
+/* ---------------------------------------------------------
+ Print styles
+ ---------------------------------------------------------*/
+@media print {
+    * {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+    }
+    html {
+        background-color: #fff;
+    }
+    /* Hide navigation */
+    nav {
+        display: none;
+    }
+
+    /* Show link destinations in brackets after the link text */
+    a[href]:after {
+        content: " (" attr(href) ") ";
+    }
+    a[href] {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #06c;
+        border: none;
+    }
+    /* Don't show link destinations for javascript or internal links */
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    figure {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+
+    figure img {
+        border: 1px solid #000;
+    }
+
+}
