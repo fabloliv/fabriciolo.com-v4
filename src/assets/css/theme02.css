@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Tema 02
  * 
@@ -6,32 +7,49 @@
  * Cor principal: #A37EF2 
  * 
  */
-
 /* Cor de fundo do site */
 body {
-    background-color: #100c18; 
+  background-color: #100c18;
 }
 
 /* Seleção de texto */
+::-moz-selection {
+  background: #A37EF2;
+  text-shadow: none;
+  color: #666;
+}
 
-::-moz-selection { background: #A37EF2;text-shadow: none;color: #666; }
+::-webkit-selection {
+  background: #A37EF2;
+  text-shadow: none;
+  color: #666;
+}
 
-::-webkit-selection { background: #A37EF2;text-shadow: none;color: #666; }
-
-::selection { background: #A37EF2;text-shadow: none;color: #666; }
+::selection {
+  background: #A37EF2;
+  text-shadow: none;
+  color: #666;
+}
 
 /* Container dos temas */
-
-#themes { background-color: #9271d9; }
+#themes {
+  background-color: #9271d9;
+}
 
 /* icones das redes sociais */
+#social-links a, .skills-list li {
+  color: #8b8b8b;
+}
 
-#social-links a, .tag-list li { color: #8b8b8b; }
-
-#social-links a:hover { color: #FFF; }
+#social-links a:hover {
+  color: #FFF;
+}
 
 /* tags */
+.skills-list li:nth-child(even) {
+  color: #A37EF2;
+}
 
-.tag-list li:nth-child(even) { color: #A37EF2; }
-
-.tagline .name { color: #FFF; }
+.tagline .name {
+  color: #FFF;
+}

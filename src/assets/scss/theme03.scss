@@ -1,0 +1,175 @@
+/*
+ * Tema 03
+ * 
+ * Cor principal: $base-color-03 
+ 
+
+    ESTRUTURA:
+
+    NAV
+    SKILLS
+    LAB
+    PORTFOLIO
+    CONTACT
+    SOCIAL
+    THEMES
+
+ */
+
+@import "mixins";
+@import "var";
+
+ // Cor de fundo do site
+
+body {
+    background-color: $base-color-03;
+    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+    background-image: -o-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+    background-image: linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+    background-size: 50px 50px;
+    padding: 0 0 2em 0;
+}
+
+// Seleção de texto 
+::-moz-selection { background: $base-color-03; text-shadow: none;color: #666; }
+::-webkit-selection { background: $base-color-03; text-shadow: none;color: #666; }
+::selection { background: $base-color-03; text-shadow: none;color: #666; }
+
+// Seções com fundo escuro 
+#skills, #social {
+    background-color: $base-bg-color-03;
+}
+
+#copyright {
+    color: #999999;
+    font: {
+        family: 'Open Sans', Arial, Helvetica, sans-serif;
+        size: 1.1em;
+        weight: 600;
+    }
+    padding: 1em 0 2em;
+    text-align: center;
+}
+
+/* CONTENT */
+
+// wrapper: regras mínimas para mobile. altera no media querie pra resoluções maiores
+.wrapper {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 960px;
+}
+
+// esse padding apenas nesse tema:
+.skills.wrapper { padding: 8em 0 3em; }
+
+.skills-list {
+    font: {
+        family: 'Oswald', Arial, Helvetica, sans-serif;
+        size: 4em;
+        weight: 400;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 .5em 0;
+    li {
+        display: inline-block;
+        padding: 1px;
+        color: #8b8b8b;
+        &:nth-child(odd) { color: $base-color-03; }
+    }
+}
+
+// Não exibir títulos nesse tema
+.skills-title { display: none; }
+
+.tagline .name { color: #FFFFFF !important; }
+
+/* SOCIAL / ICOMOON */
+
+.social-links {
+    font-size: 4em;
+    text-align: center;
+    padding: 1em 0 .5em 0;
+    li {
+        display: inline-block;
+        height: 1.8em;
+        width: 1.8em;
+    }
+    .icon-alone {
+        height: 100%;
+        line-height: 1.9em;
+        text-decoration: none;
+        width: 100%;
+        color: #8b8b8b;
+        display: inline-block;
+        &:hover { color: #FFF; }
+    }    
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* THEMES */
+
+.themes-bar {
+    left: 0;
+    position: absolute;
+    top: 3em;
+    transition: background-color 0.3s ease 0s;
+    width: 100%;
+}
+
+.styleswitcher {
+    width: 100%;
+    margin: 0 auto;
+    height: 2em;
+
+    li {
+        padding: 0 0.5em;
+        width: 25%;
+        display: inline-block;
+    }
+
+    .theme-btn {
+        display: block;
+    }
+
+     li, .theme-btn {
+        height: 100%;
+        @include box-sizing;
+    }    
+}
+
+/* ---------------------------------------------------------
+ MEDIA QUERIES
+ ---------------------------------------------------------*/
+
+@include respond-to(small-screens) {
+    .themes-bar {top: 0; }
+
+    .styleswitcher {
+        height: 3em;
+        width: 100%;
+        li { padding: 0 0.2em; }
+    }
+    .tagline .name { display: block; }
+}
+
+@include respond-to(medium-screens) {
+    .styleswitcher { width: 20%; }
+
+    .skills.wrapper { width: 60%; padding: 10% 0 5% 0; }
+
+    .skills-list { margin: 0; }
+
+    // skill levels
+    .beginner { font-size: 40%; }
+    .basic { font-size: 60%; }
+    .intermediate { font-size: 80%; }
+    // .advanced {}
+}
