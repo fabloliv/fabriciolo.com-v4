@@ -1,9 +1,6 @@
 /*
  * Tema 03
  * 
- * Cor principal: $base-color-03 
- 
-
     ESTRUTURA:
 
     NAV
@@ -18,12 +15,13 @@
 /* Variables */
 body {
   background-color: #6be5f2;
-  background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 25%, #121212 25%, #121212 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 75%, #121212 75%);
-  background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0) 25%, #121212 25%, #121212 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 75%, #121212 75%);
-  background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0) 25%, #121212 25%, #121212 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 75%, #121212 75%);
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 25%, #121212 25%, #121212 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 75%, #121212 75%);
-  background-size: 50px 50px;
-  padding: 0 0 2em 0;
+                                 /*
+background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+background-image: -o-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+background-image: linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
+background-size: 50px 50px;
+*/
 }
 
 ::-moz-selection {
@@ -49,11 +47,11 @@ body {
 }
 
 #copyright {
-  color: #999999;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
+  color: #121212;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  font-size: 1.2em;
   font-weight: 600;
-  padding: 1em 0 2em;
+  padding: 2em 0;
   text-align: center;
 }
 
@@ -96,8 +94,8 @@ body {
 /* SOCIAL / ICOMOON */
 .social-links {
   font-size: 4em;
+  padding: 1em 0;
   text-align: center;
-  padding: 1em 0 .5em 0;
 }
 .social-links li {
   display: inline-block;
@@ -143,6 +141,9 @@ body {
 }
 .styleswitcher .theme-btn {
   display: block;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
 }
 .styleswitcher li, .styleswitcher .theme-btn {
   height: 100%;

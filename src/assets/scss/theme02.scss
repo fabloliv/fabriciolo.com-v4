@@ -1,37 +1,201 @@
 /*
  * Tema 02
  * 
- * Modifica cores e detalhes da página
- * 
- * Cor principal: #A37EF2 
- * 
+    ESTRUTURA:
+
+    NAV
+    SKILLS
+    LAB
+    PORTFOLIO
+    CONTACT
+    SOCIAL
+    THEMES
+
  */
 
-/* Cor de fundo do site */
+@import "mixins";
+@import "var";
+
+ // Cor de fundo do site
+
 body {
-    background-color: #100c18; 
+    background-color: $base-color-02;
+    padding: 1em 0 0 0;
+
+    // background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+    // linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    // background-size:60px 60px;
+    // background-position:0 0, 30px 30px    
 }
 
-/* Seleção de texto */
+// Seleção de texto 
+::-moz-selection { background: $base-color-02; text-shadow: none;color: #666; }
+::-webkit-selection { background: $base-color-02; text-shadow: none;color: #666; }
+::selection { background: $base-color-02; text-shadow: none;color: #666; }
 
-::-moz-selection { background: #A37EF2;text-shadow: none;color: #666; }
+// Seções com fundo escuro 
+#skills,#social {
+    background-color: $base-bg-color-02;
+}
 
-::-webkit-selection { background: #A37EF2;text-shadow: none;color: #666; }
+#copyright {
+    color: $base-bg-color-02;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 1em 0;
+    text-align: center;
+}
 
-::selection { background: #A37EF2;text-shadow: none;color: #666; }
+/* CONTENT */
 
-/* Container dos temas */
+// wrapper: regras mínimas para mobile. altera no media querie pra resoluções maiores
+.wrapper {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 960px;
+}
 
-#themes { background-color: #9271d9; }
+// esse padding apenas nesse tema:
+.skills.wrapper {
+    padding: 6em 0;
+    @include respond-to(small-screens) {
+        width: 75%;
+    }
+    @include respond-to(medium-screens) {
+        width: 35%;
+    }
+}
 
-/* icones das redes sociais */
+.skills-list {
+    background-color: transparent;
+    background-image:  -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-image:  linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-position: -1px -1px;
+    background-size: 25% 100px;
+    font-family: 'Oswald',Arial,Helvetica,sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    padding: .6em 0 .2em 0;
+    text-transform: uppercase;
+    li {
+        @include box-sizing;
+        background-color: $base-color-02;
+        color: #000000;
+        margin: 0 0 .4375em; /* 7px */
+        padding: 0.3em 0 .3em .6em;
+        color: #000;
+    }
+    &.tagline {
+        margin: 0 0 2em .555em;
+        padding: 0;
+        background-image: none !important;
+        .name {
+            color: #DFE2D7 !important;
+            display: block;
+            font-size: 1.75em !important;
+            padding: 0 0 .3571em !important;
+        }
+        li {
+            background-color: transparent !important;
+            color: #827F84 !important;
+            display: inline-block;
+            font-size: 1.125em !important;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
 
-#social-links a, .skills-list li { color: #8b8b8b; }
+.skills-title {
+    color: #827F84;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 30px 0 10px 10px;
+    text-transform: uppercase;
+}
 
-#social-links a:hover { color: #FFF; }
+// skill levels
 
-/* tags */
+.beginner {
+    width: 25%; }
+.basic {
+    width: 50%; }
+.intermediate {
+    width: 75%; }
 
-.skills-list li:nth-child(even) { color: #A37EF2; }
+//.advanced {}
 
-.tagline .name { color: #FFF; }
+/* SOCIAL / ICOMOON */
+
+.social-links {
+    font-size: 3em;
+    padding: 1em 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        height: 1.8em;
+        width: 1.8em;
+    }
+    .icon-alone {
+        height: 100%;
+        line-height: 1.9em;
+        text-decoration: none;
+        width: 100%;
+        color: #827F84;
+        display: inline-block;
+        &:hover { color: #DFE2D7; }
+    }    
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* THEMES */
+
+.themes-bar {
+    position: fixed;
+    right: 0;
+    top: 6em;
+    //transition: all 0.3s ease 0s;
+    @include respond-to(small-screens) {
+        position: absolute;
+        top: 2em;
+    }
+}
+
+.styleswitcher {
+    height: auto;
+    width: 100%;
+
+    li {
+        display: block;
+        height: 40px;
+        padding: 5px 0 5px 0;
+        width: 50px;
+    }
+
+    .theme-btn {
+        display: block;
+        margin-left: 10px;
+        height: 100%;
+    }
+
+    li, .theme-btn {
+        @include box-sizing;
+    }
+
+    .no-touch & .theme-btn {
+        transition: margin-left 0.3s ease 0s;
+        &:hover {
+            margin-left: 0;
+        }
+    }    
+}

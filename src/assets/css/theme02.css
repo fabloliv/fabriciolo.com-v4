@@ -1,55 +1,207 @@
-@charset "UTF-8";
 /*
  * Tema 02
  * 
- * Modifica cores e detalhes da página
- * 
- * Cor principal: #A37EF2 
- * 
+    ESTRUTURA:
+
+    NAV
+    SKILLS
+    LAB
+    PORTFOLIO
+    CONTACT
+    SOCIAL
+    THEMES
+
  */
-/* Cor de fundo do site */
+/* Variables */
 body {
-  background-color: #100c18;
+  background-color: #ffd900;
+  padding: 1em 0 0 0;
 }
 
-/* Seleção de texto */
 ::-moz-selection {
-  background: #A37EF2;
+  background: #ffd900;
   text-shadow: none;
   color: #666;
 }
 
 ::-webkit-selection {
-  background: #A37EF2;
+  background: #ffd900;
   text-shadow: none;
   color: #666;
 }
 
 ::selection {
-  background: #A37EF2;
+  background: #ffd900;
   text-shadow: none;
   color: #666;
 }
 
-/* Container dos temas */
-#themes {
-  background-color: #9271d9;
+#skills, #social {
+  background-color: #222222;
 }
 
-/* icones das redes sociais */
-#social-links a, .skills-list li {
-  color: #8b8b8b;
+#copyright {
+  color: #222222;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 1em 0;
+  text-align: center;
 }
 
-#social-links a:hover {
-  color: #FFF;
+/* CONTENT */
+.wrapper {
+  margin: 0 auto;
+  width: 96%;
+  max-width: 960px;
 }
 
-/* tags */
-.skills-list li:nth-child(even) {
-  color: #A37EF2;
+.skills.wrapper {
+  padding: 6em 0;
+}
+@media only screen and (max-width: 640px) {
+  .skills.wrapper {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .skills.wrapper {
+    width: 35%;
+  }
 }
 
-.tagline .name {
-  color: #FFF;
+.skills-list {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-position: -1px -1px;
+  background-size: 25% 100px;
+  font-family: 'Oswald',Arial,Helvetica,sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: .6em 0 .2em 0;
+  text-transform: uppercase;
+}
+.skills-list li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ffd900;
+  color: #000000;
+  margin: 0 0 .4375em;
+  /* 7px */
+  padding: 0.3em 0 .3em .6em;
+  color: #000;
+}
+.skills-list.tagline {
+  margin: 0 0 2em .555em;
+  padding: 0;
+  background-image: none !important;
+}
+.skills-list.tagline .name {
+  color: #DFE2D7 !important;
+  display: block;
+  font-size: 1.75em !important;
+  padding: 0 0 .3571em !important;
+}
+.skills-list.tagline li {
+  background-color: transparent !important;
+  color: #827F84 !important;
+  display: inline-block;
+  font-size: 1.125em !important;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-title {
+  color: #827F84;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 30px 0 10px 10px;
+  text-transform: uppercase;
+}
+
+.beginner {
+  width: 25%;
+}
+
+.basic {
+  width: 50%;
+}
+
+.intermediate {
+  width: 75%;
+}
+
+/* SOCIAL / ICOMOON */
+.social-links {
+  font-size: 3em;
+  padding: 1em 0;
+  text-align: center;
+}
+.social-links li {
+  display: inline-block;
+  height: 1.8em;
+  width: 1.8em;
+}
+.social-links .icon-alone {
+  height: 100%;
+  line-height: 1.9em;
+  text-decoration: none;
+  width: 100%;
+  color: #827F84;
+  display: inline-block;
+}
+.social-links .icon-alone:hover {
+  color: #DFE2D7;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* THEMES */
+.themes-bar {
+  position: fixed;
+  right: 0;
+  top: 6em;
+}
+@media only screen and (max-width: 640px) {
+  .themes-bar {
+    position: absolute;
+    top: 2em;
+  }
+}
+
+.styleswitcher {
+  height: auto;
+  width: 100%;
+}
+.styleswitcher li {
+  display: block;
+  height: 40px;
+  padding: 5px 0 5px 0;
+  width: 50px;
+}
+.styleswitcher .theme-btn {
+  display: block;
+  margin-left: 10px;
+  height: 100%;
+}
+.styleswitcher li, .styleswitcher .theme-btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.no-touch .styleswitcher .theme-btn {
+  transition: margin-left 0.3s ease 0s;
+}
+.no-touch .styleswitcher .theme-btn:hover {
+  margin-left: 0;
 }

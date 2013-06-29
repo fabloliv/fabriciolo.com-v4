@@ -1,9 +1,6 @@
 /*
  * Tema 03
  * 
- * Cor principal: $base-color-03 
- 
-
     ESTRUTURA:
 
     NAV
@@ -22,13 +19,13 @@
  // Cor de fundo do site
 
 body {
-    background-color: $base-color-03;
+    background-color: $base-color-03;/*
     background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
     background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
     background-image: -o-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
     background-image: linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
     background-size: 50px 50px;
-    padding: 0 0 2em 0;
+    */
 }
 
 // Seleção de texto 
@@ -42,13 +39,11 @@ body {
 }
 
 #copyright {
-    color: #999999;
-    font: {
-        family: 'Open Sans', Arial, Helvetica, sans-serif;
-        size: 1.1em;
-        weight: 600;
-    }
-    padding: 1em 0 2em;
+    color: $base-bg-color-03;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 2em 0;
     text-align: center;
 }
 
@@ -90,8 +85,9 @@ body {
 
 .social-links {
     font-size: 4em;
+    padding: 1em 0;
     text-align: center;
-    padding: 1em 0 .5em 0;
+
     li {
         display: inline-block;
         height: 1.8em;
@@ -137,6 +133,9 @@ body {
 
     .theme-btn {
         display: block;
+        -webkit-border-radius: .5em;
+        -moz-border-radius: .5em;
+        border-radius: .5em;
     }
 
      li, .theme-btn {
