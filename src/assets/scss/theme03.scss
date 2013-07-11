@@ -1,16 +1,5 @@
 /*
  * Tema 03
- * 
-    ESTRUTURA:
-
-    NAV
-    SKILLS
-    LAB
-    PORTFOLIO
-    CONTACT
-    SOCIAL
-    THEMES
-
  */
 
 @import "mixins";
@@ -19,13 +8,8 @@
  // Cor de fundo do site
 
 body {
-    background-color: $base-color-03;/*
-    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
-    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
-    background-image: -o-linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
-    background-image: linear-gradient(45deg, rgba(0,0,0,0) 25%, $base-bg-color-03 25%, $base-bg-color-03 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, $base-bg-color-03 75%);
-    background-size: 50px 50px;
-    */
+    background-color: $base-color-03;
+    padding: .5em 0 0;
 }
 
 // Seleção de texto 
@@ -43,7 +27,7 @@ body {
     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
     font-size: 1.2em;
     font-weight: 600;
-    padding: 2em 0;
+    padding: 1em 0;
     text-align: center;
 }
 
@@ -56,7 +40,6 @@ body {
     max-width: 960px;
 }
 
-// esse padding apenas nesse tema:
 .skills.wrapper { padding: 8em 0 3em; }
 
 .skills-list {
@@ -79,7 +62,7 @@ body {
 // Não exibir títulos nesse tema
 .skills-title { display: none; }
 
-.tagline .name { color: #FFFFFF !important; }
+.tagline .name { color: #FFF !important; }
 
 /* SOCIAL / ICOMOON */
 
@@ -127,7 +110,8 @@ body {
 
     li {
         padding: 0 0.5em;
-        width: 25%;
+        // width: 33%; 3 temas
+        width: 50%; // 2 temas - v4.1
         display: inline-block;
     }
 
@@ -160,7 +144,8 @@ body {
 }
 
 @include respond-to(medium-screens) {
-    .styleswitcher { width: 20%; }
+    //.styleswitcher { width: 25%; }
+    .styleswitcher { width: 15%; }
 
     .skills.wrapper { width: 60%; padding: 10% 0 5% 0; }
 

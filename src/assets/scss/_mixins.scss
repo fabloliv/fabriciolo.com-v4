@@ -18,3 +18,12 @@
     @media only screen and (min-width: 1367px) { @content; }
   }
 }
+
+// from https://github.com/adambom/CSS3-Please-for-SASS
+@mixin rotate($degrees) {
+  -moz-transform: rotate(#{$degrees}deg);  /* FF3.5+ */
+  -o-transform: rotate(#{$degrees}deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(#{$degrees}deg);  /* Saf3.1+, Chrome */
+  -ms-transform: rotate(#{$degrees}deg);  /* IE9 */
+  transform: rotate(#{$degrees}deg);
+}

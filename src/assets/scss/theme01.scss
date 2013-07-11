@@ -1,37 +1,229 @@
 /*
  * Tema 01
- * 
- * Modifica cores e detalhes da página
- * 
- * Cor principal: #F92672 
- * 
  */
 
-/* Cor de fundo do site */
+@import "mixins";
+@import "var";
+
+// Cor de fundo do site
+   
+    // diagonal
+    //background-image: repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-01 25%, $base-bg-color-01 50%);
+    //background-size: 50px 50px;
+
 body {
-    background-color: #18030b; 
+    position: relative;
+    background-color: $base-color-01;
+    .cssgradients & {
+        background-image: -webkit-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -webkit-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        background-image: -moz-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -moz-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        background-image: -o-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -o-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        background-image: -ms-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -ms-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        background-image: linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        -webkit-background-size: 40px 40px;
+        -moz-background-size: 40px 40px;
+        background-size: 40px 40px;
+    }
 }
 
-/* Seleção de texto */
+// Seleção de texto 
+::-moz-selection { background-color: $base-color-01; text-shadow: none;color: #666; }
+::-webkit-selection { background-color: $base-color-01; text-shadow: none;color: #666; }
+::selection { background-color: $base-color-01; text-shadow: none;color: #666; }
 
-::-moz-selection { background: #F92672;text-shadow: none;color: #666; }
+// Seções com fundo escuro 
+#skills,#social, #copyright {
+    background-color: $base-bg-color-01;
+    width: 90%;
+}
 
-::-webkit-selection { background: #F92672;text-shadow: none;color: #666; }
+#social {
+    bottom: 190px;
+    height: 115px;
+    left: 400px;
+    overflow: hidden;
+    position: absolute;
+    @include rotate(-45);
+    width: 377px;
+}
 
-::selection { background: #F92672;text-shadow: none;color: #666; }
+#copyright {
+    color: $base-color-01;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 1em 0;
+    text-align: center;
+}
 
-/* Container dos temas */
+/* CONTENT */
 
-#themes { background-color: #e02266; }
+// wrapper: regras mínimas para mobile. altera no media querie pra resoluções maiores
+.wrapper {
+    //width: 96%;
+}
 
-/* icones das redes sociais */
+// esse padding apenas nesse tema:
 
-#social-links a, .skills-list li { color: #8b8b8b; }
+.skills.wrapper {
+    position: relative;
+    padding: 0;
+    height: 2080px;
+}
 
-#social-links a:hover { color: #FFF; }
+.row {
+    margin: 0 0 150px -100px;
+    @include rotate(-45);
 
-/* tags */
+    .skills-list {
+        float: left;
+        font-family: 'Oswald',Arial,Helvetica,sans-serif;
+        font-size: 1.4em;
+        font-weight: 400;
+        text-transform: uppercase;
+        width: 34.3em; // 480px / 14px
 
-.skills-list li:nth-child(even) { color: #F92672; }
+        li {
+            @include box-sizing;
+            border-bottom: 2px solid $base-color-01;
+            color:#DDDFD4;
+            margin: 0;
+            padding: 0.3em 0 0.3em 0;
+            text-align: right;
+        }
+        
+    }
 
-.tagline .name { color: #FFF; }
+    .skills-title {
+        background-color: #F2540B;
+        color: #942F01;
+        float: left;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        height: 195px;
+        letter-spacing: -1px;
+        text-align: center;
+        text-transform: lowercase;
+        @include rotate(90);
+        width: 195px;
+    }
+}
+
+.skills-list.tagline {
+    background-image: none !important;
+    font-family: 'Oswald',Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    left: 20px;
+    padding: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 180px;
+    @include rotate(-45);
+    .name {
+        color: #DDDFD4 !important;
+        display: block;
+        font-size: 36px;
+        padding: 0 0 3px;
+    }
+    li {
+        background-color: transparent !important;
+        color: #942F01 !important;
+        display: inline-block;
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* skill levels */
+
+.beginner { width: 25%; }
+
+.basic { width: 50%; }
+
+.intermediate { width: 75%; }
+
+// .advanced {}
+
+/* SOCIAL / ICOMOON */
+
+.social.wrapper {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    width: 400px;
+}
+
+.social-links {
+    font-size: 3em;
+    padding: 1em 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        height: 1.8em;
+        width: 1.8em;
+    }
+    .icon-alone {
+        height: 100%;
+        line-height: 1.9em;
+        text-decoration: none;
+        width: 100%;
+        color: #942F01;
+        display: inline-block;
+        &:hover {
+            color: $base-bg-color-01;;
+            background-color: $base-color-01;
+        }
+    }    
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* THEMES */
+
+.themes-bar {
+    height: 150px;
+    position: absolute;
+    right: 15%;
+    top: 6em;
+    @include rotate(45);
+    width: 150px;
+    // @include respond-to(small-screens) {
+    //     position: absolute;
+    //     top: 2em;
+    // }
+}
+
+.styleswitcher {
+    height: 100%;
+    width: 100%;
+    li {
+        display: inline-block;
+        height: 100%;        
+        width: 33.3%;
+        .csstransitions & {
+            transition: padding 0.3s ease 0s;
+        }
+        .no-touch & {
+            &:hover {
+                padding: 5%;
+            }
+        }
+        
+    }      
+
+    .theme-btn {
+        display: block;
+        height: 100%;
+    }
+
+    li, .theme-btn {
+        @include box-sizing;
+    }
+}

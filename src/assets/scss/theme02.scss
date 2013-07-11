@@ -1,16 +1,6 @@
 /*
  * Tema 02
  * 
-    ESTRUTURA:
-
-    NAV
-    SKILLS
-    LAB
-    PORTFOLIO
-    CONTACT
-    SOCIAL
-    THEMES
-
  */
 
 @import "mixins";
@@ -20,12 +10,7 @@
 
 body {
     background-color: $base-color-02;
-    padding: 1em 0 0 0;
-
-    // background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
-    // linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-    // background-size:60px 60px;
-    // background-position:0 0, 30px 30px    
+    padding: 0 0 0 .5em;
 }
 
 // Seleção de texto 
@@ -36,6 +21,12 @@ body {
 // Seções com fundo escuro 
 #skills,#social {
     background-color: $base-bg-color-02;
+}
+
+#social {
+    -webkit-border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
 }
 
 #copyright {
@@ -53,41 +44,43 @@ body {
 .wrapper {
     margin: 0 auto;
     width: 96%;
-    max-width: 960px;
 }
 
 // esse padding apenas nesse tema:
 .skills.wrapper {
     padding: 6em 0;
     @include respond-to(small-screens) {
-        width: 75%;
+        width: 96%;
     }
     @include respond-to(medium-screens) {
-        width: 35%;
+        width: 37%;
     }
 }
 
 .skills-list {
-    background-color: transparent;
-    background-image:  -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-image:  linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-    background-position: -1px -1px;
-    background-size: 25% 100px;
+    background-color: transparent;    
     font-family: 'Oswald',Arial,Helvetica,sans-serif;
     font-size: 1.6em;
     font-weight: 400;
     padding: .6em 0 .2em 0;
     text-transform: uppercase;
+
+    .cssgradients & {
+        background-image:  -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-image:  linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-position: -2px -2px;
+        background-size: 25% 100px;
+    }
+
     li {
         @include box-sizing;
         background-color: $base-color-02;
-        color: #000000;
-        margin: 0 0 .4375em; /* 7px */
-        padding: 0.3em 0 .3em .6em;
         color: #000;
+        margin: 0 0 0.4375em; /* 7px */
+        padding: .3em 0 .3em .6em;
     }
     &.tagline {
         margin: 0 0 2em .555em;
@@ -119,16 +112,15 @@ body {
     text-transform: uppercase;
 }
 
-// skill levels
+/* skill levels */
 
-.beginner {
-    width: 25%; }
-.basic {
-    width: 50%; }
-.intermediate {
-    width: 75%; }
+.beginner { width: 25%; }
 
-//.advanced {}
+.basic { width: 50%; }
+
+.intermediate { width: 75%; }
+
+// .advanced {}
 
 /* SOCIAL / ICOMOON */
 
@@ -192,8 +184,11 @@ body {
         @include box-sizing;
     }
 
-    .no-touch & .theme-btn {
+    .csstransitions & .theme-btn {
         transition: margin-left 0.3s ease 0s;
+    }
+
+    .no-touch & .theme-btn {        
         &:hover {
             margin-left: 0;
         }

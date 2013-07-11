@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="index,nofollow">
-    <title>Fabrício Oliveira - HTMLer</title>
+    <title>Fabrício Oliveira - Front-End Developer</title>
     <meta name="description" content="Codificação de sites sempre seguindo as boas práticas dos padrões web.">
     <meta name="verify-v1" content="nqBrKvNOJiSx7RZfEj3iK18Ft5tFHPaDyAh20gmKm68=">
     <meta property="og:type" content="website">
@@ -25,14 +25,14 @@
 
     <!-- THEMES -->
     <link rel="stylesheet" href="assets/css/theme03.css" title="default">        
-    <link rel="alternate stylesheet" href="assets/css/theme01.css" title="theme01">
+    <!-- <link rel="alternate stylesheet" href="assets/css/theme01.css" title="theme01"> -->
     <link rel="alternate stylesheet" href="assets/css/theme02.css" title="theme02">
-    <link rel="alternate stylesheet" href="assets/css/theme04.css" title="theme04">
+    <!-- <link rel="alternate stylesheet" href="assets/css/theme04.css" title="theme04"> -->
 
     <script src="assets/js/vendor/modernizr.custom.js"></script>
 
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Person">
 
 <!-- NAV -->
 
@@ -40,37 +40,36 @@
     <section id="skills">
         <div class="skills wrapper cf">
             <!-- TAGLINE -->        
-            <ul class="skills-list tagline"><li rel="author" class="name" itemprop="name">Fabrício Oliveira</li><li>Front-End</li><li itemprop="jobTitle">Developer</li></ul>
+            <ul class="skills-list tagline"><li rel="author" class="name" itemprop="name">Fabrício Oliveira</li><li itemprop="jobTitle">Front-End Developer</li></ul>
 
-            <h2 class="skills-title">Front-End</h2>
+            <div class="row cf" itemscope itemtype="http://schema.org/ItemList">
+                <meta itemprop="name" content="Skills">
+                <h2 class="skills-title">Front-End</h2>
+                <ul class="skills-list skills-frontend"><li itemprop="itemListElement" class="beginner">HTML5</li><li itemprop="itemListElement" class="advanced">XHTML</li><li itemprop="itemListElement" class="advanced">CSS</li><li itemprop="itemListElement" class="beginner">SASS</li><li itemprop="itemListElement" class="basic">Javascript</li><li itemprop="itemListElement" class="intermediate">JQUERY</li><li itemprop="itemListElement" class="beginner">Grunt</li><li itemprop="itemListElement" class="intermediate">Flash</li></ul>
+            </div>
+            
+            <div class="row cf" itemscope itemtype="http://schema.org/ItemList">
+                <meta itemprop="name" content="Skills">
+                <h2 class="skills-title">Back-End</h2>
+                <ul class="skills-list skills-backend"><li itemprop="itemListElement" class="intermediate">PHP</li><li itemprop="itemListElement" class="intermediate">MYSQL</li><li itemprop="itemListElement" class="basic">WORDPRESS</li><li itemprop="itemListElement" class="basic">SVN</li><li itemprop="itemListElement" class="beginner">GIT</li></ul>
+            </div>
 
-            <ul class="skills-list skills-tech"><li itemprop="itemListElement" class="beginner">HTML5</li><li itemprop="itemListElement" class="advanced">XHTML</li><li itemprop="itemListElement" class="advanced">CSS</li><li itemprop="itemListElement" class="beginner">SASS</li><li itemprop="itemListElement" class="basic">Javascript</li><li itemprop="itemListElement" class="beginner">Grunt</li><li itemprop="itemListElement" class="intermediate">JQUERY</li><li itemprop="itemListElement" class="intermediate">Flash</li></ul>
+            <div class="row cf">
+                <h2 class="skills-title">Code Editors</h2>
+                <ul class="skills-list skills-editors"><li class="intermediate">APTANA STUDIO 3</li><li class="beginner">SUBLIME-TEXT</li><li class="basic">DREAMWEAVER</li><li class="basic">NOTEPAD++</li></ul>
+            </div>
 
-            <h2 class="skills-title">Back-End</h2>
+            <div class="row cf">
+                <h2 class="skills-title">Graphics Editors</h2>
+                <ul class="skills-list skills-graph"><li class="basic">PHOTOSHOP</li><li class="beginner">INKSCAPE</li><li class="basic">FIREWORKS</li><li class="beginner">GIMP</li></ul>
+            </div>
 
-            <ul class="skills-list skills-tech"><li itemprop="itemListElement" class="intermediate">PHP</li><li itemprop="itemListElement" class="intermediate">MYSQL</li><li itemprop="itemListElement" class="basic">WORDPRESS</li><li itemprop="itemListElement" class="beginner">Node.js</li><li itemprop="itemListElement" class="basic">SVN</li><li itemprop="itemListElement" class="basic">GIT</li></ul>
-
-            <h2 class="skills-title">Code Editors</h2>
-
-            <ul class="skills-list skills-editors"><li class="intermediate">APTANA STUDIO 3</li><li class="basic">SUBLIME-TEXT</li><li class="advanced">DREAMWEAVER</li><li class="basic">NOTEPAD++</li></ul>
-
-            <h2 class="skills-title">Graphics Editors</h2>
-
-            <ul class="skills-list skills-graph"><li class="intermediate">PHOTOSHOP</li><li class="beginner">INKSCAPE</li><li class="intermediate">FIREWORKS</li><li class="beginner">GIMP</li></ul>
-
-            <h2 class="skills-title">O.S.</h2>
-
-            <ul class="skills-list skills-os"><li class="advanced">WINDOWS</li><li class="basic">UBUNTU</li></ul>
+            <div class="row cf">
+                <h2 class="skills-title">O.S.</h2>
+                <ul class="skills-list skills-os"><li class="advanced">WINDOWS</li><li class="basic">UBUNTU</li></ul>
+            </div>
         </div>
-        </section>
-
-<!-- LAB -->
-
-<!-- PORTFOLIO -->
-
-<!-- CONTACT -->
-
-<!-- SOCIAL -->
+    </section>
     <section id="social">
         <div class="social wrapper cf">
             <ul class="social-links">
@@ -118,23 +117,21 @@
 <!-- THEMES -->
 
     <section class="themes-bar cf">
-        <ul class="styleswitcher cf"><li><a href="#" title="Tema 1" rel="theme01" class="theme-btn theme01 styleswitch"><span class="hidden">Tema 1</span></a></li><li><a href="#" title="Tema 2" rel="theme02" class="theme-btn theme02 styleswitch"><span class="hidden">Tema 2</span></a></li><li><a href="#" title="Tema 3" rel="default" class="theme-btn theme03 styleswitch"><span class="hidden">Tema 3</span></a></li><li><a href="#" title="Tema 4" rel="theme04" class="theme-btn theme04 styleswitch"><span class="hidden">Tema 4</span></a></li></ul>
+        <ul class="styleswitcher cf"><!-- <li><a href="#" title="Tema 1" rel="theme01" class="theme-btn theme01 styleswitch"><span class="hidden">Tema 1</span></a></li> --><li><a href="#" title="Tema 1" rel="theme02" class="theme-btn theme02 styleswitch"><span class="hidden">Tema 1</span></a></li><li><a href="#" title="Tema 2" rel="default" class="theme-btn theme03 styleswitch"><span class="hidden">Tema 2</span></a></li><!-- <li><a href="#" title="Tema 4" rel="theme04" class="theme-btn theme04 styleswitch"><span class="hidden">Tema 4</span></a></li> --></ul>
     </section>
 
     <!-- JS -->
-    <!--  -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
     <!--<script src="assets/js/main.js"></script>-->
     <script src="assets/js/styleswitcher.js"></script>
-        <!-- 
-        <script>
-            var _gaq=[['_setAccount','UA-1156687-2'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    -->
+        
+    <script>
+        var _gaq=[['_setAccount','UA-1156687-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 </body>
 </html>
