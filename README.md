@@ -1,10 +1,23 @@
-<h1>Versão 2013 (v4)</h1>
+# fabriciolo.com
 
-<ul>
-<li>HTML5Bones como base</li>
-<li>Microdata</li>
-<li>Webfont - "Oswald" via Google Font</li>
-<li>iconfont - IcoMoon - http://keyamoon.com/icomoon/</li>
-<li>styleswitcher</li>
-<li>layout variável (responsive)</li>
-</ul>
+Meu site pessoal com algumas experiências e links pra contato.
+
+## Changelog:
+
+### v4.1.0 (11/07/2013)
+
+* Usando HTML5 Boilerplate.
+* Testes com SASS (mixins, variáveis e compressão).
+* Detecção de funcionalidades com Modernizr (css-gradient, css-transitions e no-touch).
+* Adicionado link pro Facebook.
+* Escrever um README decente em markdown!
+* TODO: finalizar 3º tema (laranja).
+
+### v4.0.0 (jan/2013)
+
+* Usando o framework HTML5Bones.
+* Testes com Microdata.
+* Webfonts usadas - Oswald e Open Sans, via Google Font.
+* iconfont - [IcoMoon](http://keyamoon.com/icomoon)
+* 4 temas, 1 HTML (Styleswitcher)
+* Responsive básico
