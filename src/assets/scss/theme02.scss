@@ -46,7 +46,7 @@ body {
     width: 96%;
 }
 
-// esse padding apenas nesse tema:
+// apenas nesse tema:
 .skills.wrapper {
     padding: 6em 0;
     @include respond-to(small-screens) {

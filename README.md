@@ -11,7 +11,7 @@ Meu site pessoal com algumas experiências e links pra contato.
 * Detecção de funcionalidades com Modernizr (css-gradient, css-transitions e no-touch).
 * Adicionado link pro Facebook.
 * Escrever um README decente em markdown!
-* TODO: finalizar 3º tema (laranja).
+* TODO: otimizar 3º tema (laranja).
 
 ### v4.0.0 (jan/2013)
 
