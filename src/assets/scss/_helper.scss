@@ -2,6 +2,12 @@
  Helper classes
  ---------------------------------------------------------*/
 
+ // wrapper: regras mínimas para mobile. altera no media querie pra resoluções maiores
+.wrapper {
+    margin: 0 auto;
+    width: 98%;
+}
+
 .ir {
     background-color: transparent;
     border: 0;

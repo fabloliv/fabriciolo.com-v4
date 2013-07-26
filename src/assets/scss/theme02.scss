@@ -19,14 +19,8 @@ body {
 ::selection { background: $base-color-02; text-shadow: none;color: #666; }
 
 // Seções com fundo escuro 
-#skills,#social {
+#skills, #social {
     background-color: $base-bg-color-02;
-}
-
-#social {
-    -webkit-border-radius: 0 0 0 10px;
-    -moz-border-radius: 0 0 0 10px;
-    border-radius: 0 0 0 10px;
 }
 
 #copyright {
@@ -39,12 +33,6 @@ body {
 }
 
 /* CONTENT */
-
-// wrapper: regras mínimas para mobile. altera no media querie pra resoluções maiores
-.wrapper {
-    margin: 0 auto;
-    width: 96%;
-}
 
 // apenas nesse tema:
 .skills.wrapper {
