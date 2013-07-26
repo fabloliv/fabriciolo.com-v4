@@ -156,7 +156,6 @@ body {
     position: fixed;
     right: 0;
     top: 6em;
-    //transition: all 0.3s ease 0s;
     @include respond-to(small-screens) {
         position: absolute;
         top: 2em;
@@ -188,9 +187,9 @@ body {
         transition: margin-left 0.3s ease 0s;
     }
 
-    .no-touch & .theme-btn {        
+    .no-touch & .theme-btn {
         &:hover {
             margin-left: 0;
         }
-    }    
+    }
 }
