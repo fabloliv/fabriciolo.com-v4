@@ -5,21 +5,29 @@
 @import "mixins";
 @import "var";
 
+// cinza claro #DDDFD4
+// cinza escuro #868B85
+// laranja escuro #942F01
+
 // Cor de fundo do site
    
     // diagonal
     //background-image: repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-01 25%, $base-bg-color-01 50%);
     //background-size: 50px 50px;
 
+$dark-gradient: rgba(0, 0, 0, .2);
+
 body {
     position: relative;
     background-color: $base-color-01;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    text-transform: lowercase;
     .cssgradients & {
-        background-image: -webkit-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -webkit-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
-        background-image: -moz-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -moz-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
-        background-image: -o-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -o-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
-        background-image: -ms-linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), -ms-linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
-        background-image: linear-gradient(45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01), linear-gradient(-45deg, $base-bg-color-01 25%, transparent 25%, transparent 75%, $base-bg-color-01 75%, $base-bg-color-01);
+        background-image: -webkit-linear-gradient(45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient), -webkit-linear-gradient(-45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient);
+        background-image: -moz-linear-gradient(45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient), -moz-linear-gradient(-45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient);
+        background-image: -o-linear-gradient(45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient), -o-linear-gradient(-45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient);
+        background-image: -ms-linear-gradient(45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient), -ms-linear-gradient(-45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient);
+        background-image: linear-gradient(45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient), linear-gradient(-45deg, $dark-gradient 25%, transparent 25%, transparent 75%, $dark-gradient 75%, $dark-gradient);
         -webkit-background-size: 40px 40px;
         -moz-background-size: 40px 40px;
         background-size: 40px 40px;
@@ -31,25 +39,18 @@ body {
 ::-webkit-selection { background-color: $base-color-01; text-shadow: none;color: #666; }
 ::selection { background-color: $base-color-01; text-shadow: none;color: #666; }
 
-// Seções com fundo escuro 
-#skills,#social, #copyright {
-    background-color: $base-bg-color-01;
-    width: 90%;
-}
-
-#social {
-    bottom: 190px;
-    height: 115px;
-    left: 400px;
-    overflow: hidden;
-    position: absolute;
-    @include rotate(-45);
-    width: 377px;
+// Seções com fundo escuro
+#skills, #social, #copyright {
+    background-color: $base-bg-color-01; 
+    width: 70%;
+    float: right;
+    @include respond-to(small-screens) {
+        width: 100%;
+    }
 }
 
 #copyright {
-    color: $base-color-01;
-    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    color: #888;
     font-size: 1.2em;
     font-weight: 600;
     padding: 1em 0;
@@ -58,101 +59,89 @@ body {
 
 /* CONTENT */
 
-// esse padding apenas nesse tema:
-.skills.wrapper {
-    position: relative;
-    padding: 0;
-    height: 2080px;
-}
+.skills.wrapper {}
 
 .row {
-    margin: 0 0 150px -100px;
-    @include rotate(-45);
+    float: left;
+    height: 29em;
+    margin: 1%;
+    overflow: hidden;
+    position: relative;
+    width: 31.3%;
+    text-align: right;
 
-    .skills-list {
-        float: left;
-        font-family: 'Oswald',Arial,Helvetica,sans-serif;
-        font-size: 1.4em;
-        font-weight: 400;
-        text-transform: uppercase;
-        width: 34.3em; // 480px / 14px
-
-        li {
-            @include box-sizing;
-            border-bottom: 2px solid $base-color-01;
-            color:#DDDFD4;
-            margin: 0;
-            padding: 0.3em 0 0.3em 0;
-            text-align: right;
-        }
-        
+    @include respond-to(small-screens) {
+        width: 48%;
     }
 
+    .skills-list {
+        color: #DDDFD4;
+        font-weight: 600;
+        li {
+            height: 30px;
+            letter-spacing: -1px;
+            line-height: 30px;
+            overflow: hidden;
+        }    
+    }
     .skills-title {
-        background-color: #F2540B;
-        color: #942F01;
-        float: left;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 42px;
+        color: #F57921;
         font-weight: 700;
-        height: 195px;
+        font-size: 2.8em;
         letter-spacing: -1px;
-        text-align: center;
-        text-transform: lowercase;
-        @include rotate(90);
-        width: 195px;
+        padding-bottom: 0.35em
     }
 }
 
 .skills-list.tagline {
-    background-image: none !important;
-    font-family: 'Oswald',Arial,Helvetica,sans-serif;
-    font-weight: 400;
-    left: 20px;
-    padding: 0;
-    position: absolute;
-    text-transform: uppercase;
-    top: 180px;
-    @include rotate(-45);
+    letter-spacing: -1px;
+    padding: 6em 0 10em;
+    text-align: right;
     .name {
-        color: #DDDFD4 !important;
+        color: #F57921 !important;
         display: block;
-        font-size: 36px;
-        padding: 0 0 3px;
+        font-size: 4.4em;
+        font-weight: 700;
+        line-height: 1em;
     }
     li {
-        background-color: transparent !important;
-        color: #942F01 !important;
+        color: #DDDFD4;
         display: inline-block;
-        font-size: 28px;
-        margin: 0;
-        padding: 0;
+        font-size: 3.4em;
+        font-weight: 600;
+        line-height: 1em;
     }
 }
 
 /* skill levels */
 
-.beginner { width: 25%; }
+.beginner {    
+    font-size: 16px; /* old browsers */
+    font-size: 1.6rem;
+}
 
-.basic { width: 50%; }
+.basic {
+    font-size: 22px;
+    font-size: 2.2rem;
+}
 
-.intermediate { width: 75%; }
+.intermediate {
+    font-size: 28px;
+    font-size: 2.8rem;
+}
 
-// .advanced {}
+.advanced {
+    font-size: 34px;
+    font-size: 3.4rem;
+}
 
 /* SOCIAL / ICOMOON */
 
 .social.wrapper {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: auto;
-    width: 400px;
 }
 
 .social-links {
     font-size: 3em;
-    padding: 1em 0;
     text-align: center;
     li {
         display: inline-block;
@@ -160,17 +149,16 @@ body {
         width: 1.8em;
     }
     .icon-alone {
+        color: #666;
+        display: inline-block;
         height: 100%;
         line-height: 1.9em;
         text-decoration: none;
-        width: 100%;
-        color: #942F01;
-        display: inline-block;
+        width: 100%; 
         &:hover {
-            color: $base-bg-color-01;;
-            background-color: $base-color-01;
+            color: #DDDFD4;
         }
-    }    
+    }
 }
 
 .screen-reader-text {
@@ -182,16 +170,16 @@ body {
 /* THEMES */
 
 .themes-bar {
-    height: 150px;
+    height: 5em;
     position: absolute;
-    right: 15%;
+    right: 49%;
     top: 6em;
-    @include rotate(45);
-    width: 150px;
-    // @include respond-to(small-screens) {
-    //     position: absolute;
-    //     top: 2em;
-    // }
+    width: 15em;
+
+    @include respond-to(small-screens) {
+        left: 0;
+        top: 0;
+    }
 }
 
 .styleswitcher {
@@ -199,14 +187,20 @@ body {
     width: 100%;
     li {
         display: inline-block;
-        height: 100%;        
+        height: 100%;
+        @include rotate(-45);
         width: 33.3%;
         .csstransitions & {
-            transition: padding 0.3s ease 0s;
+            -webkit-transition: padding 0.2s;
+            -moz-transition: padding 0.2s;
+            -ms-transition: padding 0.2s;
+            -o-transition: padding 0.2s;
+            transition: padding 0.2s;
+            padding: 5%;
         }
         .no-touch & {
             &:hover {
-                padding: 5%;
+                padding: 0;
             }
         }        
     }      
