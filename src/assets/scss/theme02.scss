@@ -16,6 +16,9 @@ body {
         padding: 0 0 5em 0;
     }
     .cssgradients & {
+        background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-02 25%, $base-bg-color-02 50%);
+        background-image: -moz-repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-02 25%, $base-bg-color-02 50%);
+        background-image: -o-repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-02 25%, $base-bg-color-02 50%);
         background-image: repeating-linear-gradient(-45deg, transparent, transparent 25%, $base-bg-color-02 25%, $base-bg-color-02 50%);
         background-size: 4em 4em;
     }

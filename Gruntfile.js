@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                 dest: '/home/fabriciolo2/public_html',
                 host: 'fabriciolo2@fabriciolo.com',
                 recursive: true,
-                syncDest: true
+                syncDest: false
             }
         }
     };
